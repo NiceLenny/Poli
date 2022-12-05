@@ -67,7 +67,7 @@
     /* border: 3px solid rgb(49, 221, 6); */
     height: 100vh;
     width: 100vw;
-    background: url(/Polirovka/Sablon/fon1.png);
+    background: url(/Sablon/fon1.png);
     background-size: cover;
     background-repeat: repeat
 
@@ -267,7 +267,7 @@
     }
     .navbar a#pull:after {  
         content:"";  
-        background: url('/Polirovka/icons/menu.png') no-repeat;  
+        background: url('/icons/menu.png') no-repeat;  
         background-size: cover;
         
         width: 30px;  
