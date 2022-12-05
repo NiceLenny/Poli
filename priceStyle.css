@@ -1,0 +1,252 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    font-family: 'Alegreya SC', serif;
+    color: #fff;
+
+}
+
+#loader-wrapper{position:absolute;left:0;top:0;right:0;bottom:0;background:#000;z-index:15;overflow:hidden}
+.loader{width:150px;height:150px;border:1px #fff solid;position:absolute;left:50%;top:50%;margin:-75px 0 0 -75px;border-radius:50%}
+.loader .loading{font-size:10px;position:absolute;width:100%;text-align:center;line-height:14px;font-family:'Century Gothic',sans-serif;font-style:italic;left:0;top:50%;margin-top:20px;color:#fff;font-weight:700;text-transform:uppercase}
+.loader-circle-1{width:138px;height:138px;left:5px;top:5px;border:1px #fff solid;border-radius:50%;position:absolute;border-right-color:transparent;-webkit-animation:spin 3s linear infinite;animation:spin 3s linear infinite}
+.loader-circle-2{width:126px;height:126px;left:5px;top:5px;border:1px transparent solid;border-radius:50%;position:absolute;border-right-color:#e81512;-webkit-animation:spin 5s linear infinite;animation:spin 5s linear infinite}
+.loader .line{width:10px;height:2px;background:#fff;position:absolute}
+.loader .line:nth-child(1){left:16px;top:50%;margin-top:-1px}
+.loader .line:nth-child(2){transform:rotate(45deg);-moz-transform:rotate(45deg);-webkit-transform:rotate(45deg);-ms-transform:rotate(45deg);left:33px;top:33px}
+.loader .line:nth-child(3){top:16px;left:50%;width:2px;height:10px}
+.loader .line:nth-child(4){transform:rotate(135deg);-moz-transform:rotate(135deg);-webkit-transform:rotate(135deg);-ms-transform:rotate(135deg);right:33px;top:33px}
+.loader .line:nth-child(5){right:16px;top:50%;margin-top:-1px}
+.loader .line:nth-child(6){transform:rotate(45deg);-moz-transform:rotate(45deg);-webkit-transform:rotate(45deg);-ms-transform:rotate(45deg);right:33px;bottom:33px;background:#e81512}
+.loader .subline{position:absolute;width:3px;height:2px;background:#fff}
+.loader .subline:nth-child(7){transform:rotate(22.5deg);-moz-transform:rotate(22.5deg);-webkit-transform:rotate(22.5deg);-ms-transform:rotate(22.5deg);left:21px;top:50px}
+.loader .subline:nth-child(8){transform:rotate(67.5deg);-moz-transform:rotate(67.5deg);-webkit-transform:rotate(67.5deg);-ms-transform:rotate(67.5deg);left:50px;top:21px}
+.loader .subline:nth-child(9){transform:rotate(112.5deg);-moz-transform:rotate(112.5deg);-webkit-transform:rotate(112.5deg);-ms-transform:rotate(112.5deg);right:50px;top:21px}
+.loader .subline:nth-child(10){transform:rotate(157.5deg);-moz-transform:rotate(157.5deg);-webkit-transform:rotate(157.5deg);-ms-transform:rotate(157.5deg);right:21px;top:50px}
+.loader .subline:nth-child(11){transform:rotate(22.5deg);-moz-transform:rotate(22.5deg);-webkit-transform:rotate(22.5deg);-ms-transform:rotate(22.5deg);right:20px;bottom:49px;background:#e81512}
+.loader .needle{width:14px;height:14px;border-radius:50%;border:1px #fff solid;position:absolute;left:50%;top:50%;margin:-8px 0 0 -8px;z-index:1;-webkit-animation:pegIt 3s infinite ease-in-out;animation:pegIt 3s infinite ease-in-out}
+.loader .needle:before{content:"";width:0;height:0;border-style:solid;border-width:3.5px 50px 3.5px 0;border-color:transparent #e81512 transparent transparent;position:absolute;right:50%;top:50%;margin:-3.5px 0 0;border-radius:0 50% 50% 0}
+@keyframes pegIt {
+0%{transform:rotate(0deg)}
+16%{transform:rotate(75deg)}
+25%{transform:rotate(55deg)}
+30%{transform:rotate(90deg)}
+36%{transform:rotate(170deg)}
+42%{transform:rotate(150deg)}
+50%{transform:rotate(227deg)}
+100%{transform:rotate(0deg)}
+}
+@-webkit-keyframes pegIt {
+0%{-webkit-transform:rotate(0deg)}
+16%{-webkit-transform:rotate(75deg)}
+25%{-webkit-transform:rotate(55deg)}
+30%{-webkit-transform:rotate(90deg)}
+36%{-webkit-transform:rotate(170deg)}
+42%{-webkit-transform:rotate(150deg)}
+50%{-webkit-transform:rotate(227deg)}
+100%{-webkit-transform:rotate(0deg)}
+}
+@-webkit-keyframes spin {
+0%{-webkit-transform:rotate(0deg)}
+100%{-webkit-transform:rotate(360deg)}
+}
+@keyframes spin {
+0%{transform:rotate(0deg)}
+100%{transform:rotate(360deg)}
+}
+.done {
+    opacity: 0;
+    visibility: hidden;
+}
+
+
+.conteiner {
+    
+    /* border: 3px solid rgb(49, 221, 6); */
+    height: 100vh;
+    width: 100vw;
+    background: url(/Polirovka/Sablon/fon1.png);
+    background-size: cover;
+
+}
+
+.navbar{
+    height: calc(50px + (70-50) * ((100vh - 320px)/(1200-320)));  
+    width: 100%;    
+    position: relative;
+    /* border: 3px solid #ba013d; */
+}
+
+.navbar ul {
+    display: flex;
+    justify-content: right;
+}
+
+.navbar ul li { 
+    list-style-type: none; 
+    margin: 30px 20px;
+    /* border: 3px solid #20ba01; */
+}
+
+.navbar:before,  
+.navbar:after {  
+    content: " ";  
+}  
+.navbar:after {  
+    clear: both;  
+}  
+.navbar {  
+    *zoom: 1;  
+} 
+
+.navbar ul li:last-child a {
+    margin-right: calc(10px + (15-10) * ((100vw - 320px)/(1200-320)));
+}
+
+.navbar a {
+    letter-spacing: 3px;
+    text-decoration: none;  
+    font-size: calc(10px + (15-10) * ((100vw - 320px)/(1200-320)));
+    text-transform: uppercase;
+    /* border: 3px solid #e0ad06; */
+}
+
+.navbar ul li a:active, .navbar ul li a:hover {
+    color: #ba013d;
+}
+
+#pull {
+    display: none; 
+}
+.box{
+    display: flex;
+}
+.right {
+    display: block;
+    
+}
+
+.tbl {
+    
+    border-top: 3px solid #fcfdfb;
+    border-bottom: 3px solid #fcfdfb;
+    letter-spacing: 3px;  
+    font-size: calc(5px + (10-5) * ((100vw - 320px)/(1200-320)));
+    text-transform: uppercase;
+    margin-top: calc(15px + (40-15) * ((100vw - 320px)/(1200-320)));
+}
+table {  
+      border-spacing  : calc(15px + (40-15) * ((100vw - 320px)/(1200-320))) calc(10px + (25-10) * ((100vw - 320px)/(1200-320)));
+}
+
+
+.btn {
+    color: #ffffff;
+    background: #fcfdfb00;
+    font-size: calc(10px + (20-10) * ((100vw - 320px)/(1200-320)));
+    font-weight: bold;
+    padding-left: calc(5px + (10-5) * ((100vw - 320px)/(1200-320)));
+    padding-right: calc(5px + (10-5) * ((100vw - 320px)/(1200-320)));
+}
+
+.btn:hover {
+    cursor: pointer; 
+}
+
+.itog {
+    letter-spacing: 3px;
+    text-decoration: none;  
+    font-size: calc(8px + (13-8) * ((100vw - 320px)/(1200-320)));
+    text-transform: uppercase;
+    margin: calc(10px + (30-10) * ((100vw - 320px)/(1200-320)));
+
+}
+
+.img {
+    
+    background: url("/Polirovka/Sablon/poli.png");
+    background-size: cover;
+    background-position: center;
+    width: calc(100px + (400-100) * ((100vw - 320px)/(1200-320)));
+    height: calc(100px + (400-100) * ((100vw - 320px)/(1200-320)));
+    margin: calc(10px + (20-10) * ((100vw - 320px)/(1200-320)));
+    border-radius: 50px;
+}
+.good {
+    position: absolute;
+    width: 200px;
+    top: 70px;
+    left: 300px;
+
+}
+.img img:hover {
+	/*transform: scale(1.2); Увеличение размера больше 1 уменьшение меньше 1*/
+	transition: all 1s ease; /*задержка всех, 1 сек, ease/linear/итд это тип перехода*/
+	transform: rotate(360deg); /*Поворот картинки deg это градусы*/
+}
+
+   
+@media screen and (max-width: 800px) {
+    .conteiner {
+        display: block;
+        height: 100vh;  
+    }
+    .navbar ul {  
+        display: none;  
+    }  
+    .navbar a#pull { 
+        display: flex;
+        align-items: center;
+        padding-left: 10px; 
+        height: 100%;
+        position: relative; 
+    }
+    .navbar a#pull:after {  
+        content:"";  
+        background: url('/Polirovka/icons/menu.png') no-repeat;  
+        background-size: cover;
+        width: 30px;  
+        height: 20px;  
+        display: inline-block;  
+        position: absolute;  
+        right: 15px;  
+        top: 15px; 
+      
+    } 
+
+}
+
+@media screen and (min-width: 800px) and (max-height: 650px) {
+    .conteiner {
+        display: block;
+        height: 100vh;  
+    }
+
+    .navbar{
+        height: calc(50px + (70-50) * ((100vh - 320px)/(700-320)));  
+        /* border: 3px solid #ba013d; */
+    }    
+    .navbar a {
+        letter-spacing: 5px; 
+        font-size: calc(15px + (20-15) * ((100vh - 320px)/(700-320)));
+    }
+   
+   
+} 
+
+@media screen and (max-width: 800px) and (max-height: 700px) {
+    .conteiner {
+        display: block;
+        height: 100vh;  
+    }
+    
+    .navbar a {
+        letter-spacing: 5px; 
+        font-size: calc(15px + (20-15) * ((100vw - 320px)/(800-320)));
+    }
+    
+   
+}
+
