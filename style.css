@@ -71,7 +71,7 @@
 }
 
 .left {
-    background: url("/Polirovka/Sablon/imgfon.png");
+    background: url("/Sablon/imgfon.png");
     background-size: cover;
     width: 100%;
     height: 100vh;
@@ -79,7 +79,7 @@
 } 
 
 .right {
-    background: url("/Polirovka/Sablon/fon1.png");
+    background: url("/Sablon/fon1.png");
     background-position: center;
     background-size: cover;
     
@@ -218,7 +218,7 @@
     }
     .navbar a#pull:after {  
         content:"";  
-        background: url('/Polirovka/icons/menu.png') no-repeat;  
+        background: url('/icons/menu.png') no-repeat;  
         background-size: cover;
         width: 30px;  
         height: 20px;  
